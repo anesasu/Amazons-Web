@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(48,58,68);
+    background-color: rgb(32,32,32);
 }
 
 .main-nav {
@@ -13,7 +13,7 @@ body {
     padding:      10px;
     padding-left: 50px;
 
-    background: linear-gradient(rgb(196,206,216), rgb(128,138,148));
+    background: linear-gradient(rgb(192,192,192), rgb(255,255,255));
 }
 
 h1 {
@@ -25,7 +25,7 @@ h1 {
     font-family: "Supermercado One";
     font-size:   20px;
     font-weight: bold;
-    color:       rgb(56,76,96);
+    color:       rgb(64,64,64);
 }
 
 .main-nav-link {
@@ -38,5 +38,25 @@ h1 {
 }
 
 .main-nav-link:hover {
-    color: rgb(0,64,128);
+    color: rgb(0,96,160);
+    text-decoration: underline;
+}
+
+.content {
+    width:        800px;
+    margin:       0;
+    margin-left:  auto;
+    margin-right: auto;
+
+    padding:        5px;
+    padding-left:  30px;
+    padding-right: 30px;
+
+    background-color: rgb(48,48,48);
+}
+
+p {
+    font-family: Nunito;
+    font-size:   12px;
+    color:       rgb(224,224,224);
 }
