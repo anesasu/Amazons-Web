@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+
+import Lobby from "./Lobby";
 
 class Play extends React.Component {
     state = {
@@ -7,7 +9,7 @@ class Play extends React.Component {
     };
 
     componentDidMount() {
-        fetch('/getClientID').then(res => res.json()).then(data => this.setState({
+        fetch("/getClientID").then(res => res.json()).then(data => this.setState({
                 clientID: data.id,
                 greeting: <p>Welcome, you are <b>Guest{data.id}</b></p>
             })
@@ -18,6 +20,7 @@ class Play extends React.Component {
         return (
             <div className="content">
                 {this.state.greeting}
+                {this.state.clientID ? <Lobby /> : <></>}
             </div>
         )
     }

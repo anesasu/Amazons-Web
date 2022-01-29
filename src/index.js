@@ -1,10 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import { BrowserRouter } from "react-router-dom"
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import MainContainer from "./components/MainContainer"
+import MainContainer from "./components/MainContainer";
 
-import "./default.css"
+import "./default.css";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -13,4 +13,4 @@ ReactDOM.render(
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById("root")
-)
+);

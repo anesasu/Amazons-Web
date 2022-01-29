@@ -1,8 +1,8 @@
-import React from "react"
-import { Route, Routes } from "react-router-dom"
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import MainNav from "./MainNav"
-import Play    from "./Play"
+import MainNav from "./MainNav";
+import Play    from "./Play";
 
 class MainContainer extends React.Component {
     render() {

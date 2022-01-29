@@ -1,9 +1,10 @@
 import time
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 next_id = 1
+lobbies = []
 
 @app.route('/getClientID')
 def getClientID():
@@ -14,4 +15,15 @@ def getClientID():
 
     return {
         'id': id
+    }
+
+@app.route('/createLobby', methods=['POST'])
+def createLobby():
+    lobby = {
+        'name': request.get_json()['name']
+    }
+
+    lobbies.append(lobby)
+    return {
+        'lobbies': lobbies
     }
