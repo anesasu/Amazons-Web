@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(32,32,32);
+    background-color: rgb(32,32,40);
 }
 
 .main-nav {
@@ -13,7 +13,8 @@ body {
     padding:      10px;
     padding-left: 50px;
 
-    background: linear-gradient(rgb(192,192,192), rgb(255,255,255));
+    background: linear-gradient(rgb(32,32,40), rgb(0,0,8));
+    border-bottom: 1px rgb(64,64,72) solid;
 }
 
 h1 {
@@ -25,7 +26,16 @@ h1 {
     font-family: "Supermercado One";
     font-size:   20px;
     font-weight: bold;
-    color:       rgb(64,64,64);
+
+    background: linear-gradient(135deg, rgb(192,64,64), rgb(64,64,192));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-title:hover {
+    background: linear-gradient(135deg, rgb(192,192,64), rgb(64,192,192));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .main-nav-link {
@@ -33,13 +43,15 @@ h1 {
 
     font-family:     Nunito;
     font-size:       14px;
-    color:           black;
+    color:           rgb(128,128,136);
     text-decoration: none;
+
+    transition: transform .5s;
 }
 
 .main-nav-link:hover {
-    color: rgb(0,96,160);
-    text-decoration: underline;
+    color: white;
+    transform: translateY(-3px);
 }
 
 .content {
@@ -48,8 +60,6 @@ h1 {
     margin-left:  auto;
     margin-right: auto;
     padding:      25px;
-
-    background-color: rgb(48,48,48);
 }
 
 p {
@@ -81,27 +91,31 @@ button:hover {
 }
 
 .sub-content {
-    margin-left:   -25px;
-    margin-right:  -25px;
-    padding-left:   25px;
-    padding-right:  25px;
-    padding-bottom: 10px;
+    margin-top:     10px;
+    margin-left:    20px;
+    margin-right:   20px;
+    padding:        25px;
+    padding-top:    15px;
+    padding-bottom: 20px;
 
-    background: linear-gradient(rgb(96,96,96), rgb(64,64,64));
+    background: linear-gradient(rgb(32,32,40), rgb(64,64,72));
+    border: 1px rgb(64,64,72) solid;
 }
 
 h2 {
-    text-align:  center;
+    margin:        0;
+    margin-bottom: 5px;
+
     font-family: Nunito;
     font-size:   14px;
     color:       rgb(224,224,224);
 
-    border-bottom: 1px rgb(96,96,96) solid;
-    margin-bottom: 5px;
+    border-bottom: 1px rgb(48,48,56) solid;
 }
 
 p.label {
-    color: rgb(192,192,192);
+    font-size: 11px;
+    color:     rgb(160,160,168);
 }
 
 input {
@@ -113,7 +127,8 @@ input {
 
     font-family: Nunito;
     font-size:   12px;
+    color:       white;
 
-    background: linear-gradient(rgb(192,192,192), rgb(255,255,255));
-    border: none;
+    background: linear-gradient(rgb(64,64,72), rgb(96,96,104));
+    border: 1px rgb(128,128,136) solid;
 }
