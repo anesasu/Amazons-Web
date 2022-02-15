@@ -27,3 +27,9 @@ def createLobby():
     return {
         'lobbies': lobbies
     }
+
+@app.route('/getLobbies')
+def getLobbies():
+    return {
+        'lobbies': lobbies
+    }

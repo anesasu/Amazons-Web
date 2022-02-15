@@ -17,7 +17,7 @@ class LobbyCreate extends React.Component {
             headers: {"Content-Type": "application/json"},
             body:    JSON.stringify({name: this.state.name})
         }).then(res => res.json()).then(data => {
-            console.log(data);
+            this.props.setLobbies(data);
         });
     };
 

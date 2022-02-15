@@ -121,9 +121,9 @@ p.label {
 input {
     display: block;
 
-    padding:       2px;
-    padding-left: 10px;
-    width:       300px;
+    padding:      2px;
+    padding-left: 5px;
+    width:      300px;
 
     font-family: Nunito;
     font-size:   12px;
@@ -131,4 +131,33 @@ input {
 
     background: linear-gradient(rgb(64,64,72), rgb(96,96,104));
     border: 1px rgb(128,128,136) solid;
+}
+
+.lobby-list {
+    margin-top: 10px;
+    border: 1px rgb(64,64,72) solid;
+}
+
+.lobby-list-header {
+    padding:      1px;
+    padding-left: 5px;
+
+    background: linear-gradient(rgb(32,32,40), rgb(16,16,24));
+}
+
+.lobby-list-header > p {
+    font-weight: bold;
+}
+
+.lobby-list-item {
+    padding:      1px;
+    padding-left: 5px;
+
+    background: linear-gradient(rgb(40,40,48), rgb(48,48,56));
+    border-top: 1px rgb(64,64,72) solid;
+}
+
+.lobby-list-item:hover {
+    background: linear-gradient(rgb(96,96,104), rgb(64,64,72));
+    cursor: pointer;
 }
