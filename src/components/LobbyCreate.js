@@ -15,9 +15,10 @@ class LobbyCreate extends React.Component {
         fetch("/createLobby", {
             method:  "post",
             headers: {"Content-Type": "application/json"},
-            body:    JSON.stringify({name: this.state.name})
+            body:    JSON.stringify({name: this.state.name, uuid: this.props.uuid})
         }).then(res => res.json()).then(data => {
             this.props.setLobbies(data);
+            this.props.hideCreate();
         });
     };
 

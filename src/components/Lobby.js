@@ -28,15 +28,23 @@ class Lobby extends React.Component {
         });
     }
 
+    hideCreate = () => {
+        this.setState({
+            creating_lobby: false
+        });
+    }
+
     render() {
         return (
             <div className="lobby">
                 <button onClick={this.createLobby}>Create Lobby</button>
-                {this.state.creating_lobby ? <LobbyCreate setLobbies={this.setLobbies} /> : <></>}
+                {this.state.creating_lobby ? <LobbyCreate setLobbies={this.setLobbies} hideCreate={this.hideCreate} uuid={this.props.uuid} /> : <></>}
 
+                <h2 className="break">Open Lobbies</h2>
                 <div className="lobby-list">
                     <div className="lobby-list-header">
-                        <p>Open Lobbies</p>
+                        <p>Title</p>
+                        <p>Creator</p>
                     </div>
                     {this.state.lobbies.map((l) => <LobbyListItem data={l} />)}
                 </div>

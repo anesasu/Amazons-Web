@@ -1,8 +1,10 @@
 import time
+import uuid
 from flask import Flask, request
 
 app = Flask(__name__)
 
+clients = {}
 next_id = 1
 lobbies = []
 
@@ -13,14 +15,21 @@ def getClientID():
     id = next_id
     next_id += 1
 
+    client_uuid = str(uuid.uuid4())
+    clients[client_uuid] = {
+        'username': 'Guest' + str(id)
+    }
+
     return {
-        'id': id
+        'id':   id,
+        'uuid': client_uuid
     }
 
 @app.route('/createLobby', methods=['POST'])
 def createLobby():
     lobby = {
-        'name': request.get_json()['name']
+        'name':  request.get_json()['name'],
+        'owner': clients[request.get_json()['uuid']]['username']
     }
 
     lobbies.append(lobby)

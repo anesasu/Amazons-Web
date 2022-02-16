@@ -113,6 +113,10 @@ h2 {
     border-bottom: 1px rgb(48,48,56) solid;
 }
 
+.break {
+    margin-top: 20px;
+}
+
 p.label {
     font-size: 11px;
     color:     rgb(160,160,168);
@@ -139,6 +143,9 @@ input {
 }
 
 .lobby-list-header {
+    display:         flex;
+    flex-direction:  row;
+
     padding:      1px;
     padding-left: 5px;
 
@@ -150,6 +157,9 @@ input {
 }
 
 .lobby-list-item {
+    display:         flex;
+    flex-direction:  row;
+
     padding:      1px;
     padding-left: 5px;
 
@@ -160,4 +170,8 @@ input {
 .lobby-list-item:hover {
     background: linear-gradient(rgb(96,96,104), rgb(64,64,72));
     cursor: pointer;
+}
+
+.lobby-list-item > p, .lobby-list-header > p {
+    width: 50%;
 }

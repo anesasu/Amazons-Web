@@ -5,6 +5,7 @@ class LobbyListItem extends React.Component {
         return (
             <div className="lobby-list-item">
                 <p>{this.props.data.name}</p>
+                <p>{this.props.data.owner}</p>
             </div>
         )
     }
